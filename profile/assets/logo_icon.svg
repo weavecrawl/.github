@@ -1,0 +1,114 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="100%" height="100%">
+  <defs>
+    <!-- Background Gradient -->
+    <linearGradient id="bg-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#090D16" />
+      <stop offset="50%" stop-color="#0F172A" />
+      <stop offset="100%" stop-color="#030712" />
+    </linearGradient>
+
+    <!-- Primary Neural Weave Gradient -->
+    <linearGradient id="weave-primary" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#06B6D4" />
+      <stop offset="45%" stop-color="#6366F1" />
+      <stop offset="100%" stop-color="#A855F7" />
+    </linearGradient>
+
+    <!-- Secondary Accent Thread Gradient -->
+    <linearGradient id="thread-accent" x1="100%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#38BDF8" stop-opacity="0.9" />
+      <stop offset="50%" stop-color="#818CF8" stop-opacity="0.7" />
+      <stop offset="100%" stop-color="#10B981" stop-opacity="0.9" />
+    </linearGradient>
+
+    <!-- Glow Filter for Nodes & Signal Filaments -->
+    <filter id="neon-glow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="8" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+
+    <!-- Node Gradient -->
+    <radialGradient id="node-glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FFFFFF" />
+      <stop offset="40%" stop-color="#38BDF8" />
+      <stop offset="100%" stop-color="#6366F1" stop-opacity="0" />
+    </radialGradient>
+  </defs>
+
+  <!-- App Icon Squircle Container -->
+  <rect width="512" height="512" rx="112" fill="url(#bg-grad)" stroke="#1E293B" stroke-width="3" />
+
+  <!-- Subtle Structural Memory Grid Netting -->
+  <g stroke="#1E293B" stroke-width="1" opacity="0.35">
+    <circle cx="256" cy="256" r="180" fill="none" stroke-dasharray="4 8" />
+    <circle cx="256" cy="256" r="120" fill="none" stroke-dasharray="2 6" opacity="0.5" />
+    <line x1="96" y1="256" x2="416" y2="256" stroke-dasharray="3 6" />
+    <line x1="256" y1="96" x2="256" y2="416" stroke-dasharray="3 6" />
+  </g>
+
+  <!-- Cross-Graph Memory Weave Threads (Background Structural Links) -->
+  <g stroke="url(#thread-accent)" stroke-width="2" opacity="0.55" stroke-linecap="round">
+    <!-- Synaptic cross-connections defining page geometry -->
+    <path d="M 128 152 L 256 242" stroke-dasharray="4 4" />
+    <path d="M 384 152 L 256 242" stroke-dasharray="4 4" />
+    <path d="M 196 368 L 316 368" stroke-dasharray="6 6" />
+    <path d="M 128 152 Q 256 100 384 152" fill="none" stroke-width="1.5" opacity="0.4" />
+    <path d="M 196 368 Q 256 420 316 368" fill="none" stroke-width="1.5" opacity="0.4" />
+  </g>
+
+  <!-- Ambient Glow Behind Main W -->
+  <path d="M 128 152 L 196 368 L 256 242 L 316 368 L 384 152" 
+        fill="none" 
+        stroke="url(#weave-primary)" 
+        stroke-width="32" 
+        stroke-linecap="round" 
+        stroke-linejoin="round" 
+        opacity="0.25" 
+        filter="url(#neon-glow)" />
+
+  <!-- The Iconic Core "W" Weave Mark (Solid Geometry) -->
+  <path d="M 128 152 L 196 368 L 256 242 L 316 368 L 384 152" 
+        fill="none" 
+        stroke="url(#weave-primary)" 
+        stroke-width="22" 
+        stroke-linecap="round" 
+        stroke-linejoin="round" />
+
+  <!-- Inner High-Velocity Core Filament -->
+  <path d="M 128 152 L 196 368 L 256 242 L 316 368 L 384 152" 
+        fill="none" 
+        stroke="#E0F2FE" 
+        stroke-width="5" 
+        stroke-linecap="round" 
+        stroke-linejoin="round" 
+        opacity="0.9" />
+
+  <!-- Synaptic Graph Junction Nodes -->
+  <!-- Left Entry Node -->
+  <circle cx="128" cy="152" r="16" fill="url(#node-glow)" />
+  <circle cx="128" cy="152" r="7" fill="#FFFFFF" />
+
+  <!-- Bottom Left Node -->
+  <circle cx="196" cy="368" r="18" fill="url(#node-glow)" />
+  <circle cx="196" cy="368" r="8" fill="#FFFFFF" />
+
+  <!-- Central Pivot Vertex (The Replay Core) -->
+  <circle cx="256" cy="242" r="22" fill="url(#node-glow)" filter="url(#neon-glow)" />
+  <circle cx="256" cy="242" r="9" fill="#38BDF8" />
+  <circle cx="256" cy="242" r="4" fill="#FFFFFF" />
+
+  <!-- Bottom Right Node -->
+  <circle cx="316" cy="368" r="18" fill="url(#node-glow)" />
+  <circle cx="316" cy="368" r="8" fill="#FFFFFF" />
+
+  <!-- Right Exit Node -->
+  <circle cx="384" cy="152" r="16" fill="url(#node-glow)" />
+  <circle cx="384" cy="152" r="7" fill="#FFFFFF" />
+
+  <!-- Active Telemetry Pulse Indicator (Signal Dot) -->
+  <circle cx="256" cy="108" r="4" fill="#10B981" />
+  <circle cx="256" cy="108" r="8" fill="none" stroke="#10B981" stroke-width="1.5" opacity="0.6">
+    <animate attributeName="r" values="4;14;4" dur="2.4s" repeatCount="indefinite" />
+    <animate attributeName="opacity" values="0.8;0;0.8" dur="2.4s" repeatCount="indefinite" />
+  </circle>
+</svg>
